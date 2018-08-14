@@ -10,6 +10,11 @@
   height: 80px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .App-header {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
@@ -23,10 +28,21 @@
   grid-column-end: 1;
 }
 
+.Nav {
+  text-align: center;
+}
+
 .AuthorNav {
   grid-column-start: 9;
   grid-column-end: 10;
   cursor: pointer;
+}
+
+.Author {
+  margin: auto;
+  width: 400px;
+  text-align: center;
+  padding-top: 40px;
 }
 
 .PurchaseNav {
@@ -45,6 +61,16 @@
   width: 300px;
   height: 400px;
   float: left;
+  border: 1px solid black;
+  border-left: 4px solid black;
+}
+
+.BookCoverPurchase {
+  width: 300px;
+  margin: auto;
+  height: 400px;
+  border: 1px solid black;
+  border-left: 4px solid black;
 }
 
 .BookSummary {
@@ -70,6 +96,18 @@
   float: right;
   width: 140px;
   height: 200px;
+}
+
+.PeekingPigBottom {
+  position: absolute;
+  top: 59px;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+.PurchaseLinks {
+  margin: auto;
 }
 
 @keyframes App-logo-spin {

@@ -9,17 +9,17 @@ const App = () => (
   <Router>
     <div>
       <header className="App-header">
-        <div className="KierraNav">
+        <div className="KierraNav Nav">
           <Link to="/">
             <h3>Kierra Falbo</h3>
           </Link>
         </div>
-        <div className="AuthorNav">
+        <div className="AuthorNav Nav">
           <Link to="/author">
             <h3>Author</h3>
           </Link>
         </div>
-        <div className="PurchaseNav">
+        <div className="PurchaseNav Nav">
           <Link to="/purchase">
             <h3>Purchase</h3>
           </Link>
