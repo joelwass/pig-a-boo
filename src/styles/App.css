@@ -1,63 +1,87 @@
 
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  font-family: 'Doctor Soos';
+  width: 100%;
+}
+
+.KierraNav {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.App-header {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  border-bottom: 1px solid black;
+}
+
+.Nav {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.AuthorNav {
+  grid-column-start: 9;
+  grid-column-end: 10;
+  cursor: pointer;
+}
+
+.PurchaseNav {
+  grid-column-start: 10;
+  grid-column-end: 11;
+  cursor: pointer;
+}
+
+.App-body {
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.Author {
+  margin: auto;
+  width: 400px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.BookCover {
+  width: 100%;
+  height: auto;
+  float: left;
+  border: 1px solid black;
+  border-left: 4px solid black;
+}
+
+.BookCoverImage {
+  width: 100%;
+  height: 100%;
+}
+
+.PurchaseLinks {
+  margin: auto;
+}
+
+.BookCoverImage {
+  width: 100%;
+  height: 100%;
+}
+
 @media all and (min-width: 850px) {
-  .App {
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    font-family: 'Doctor Soos';
-  }
-  
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .App-header {
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-    border-bottom: 1px solid black;
-  }
-  
-  .KierraNav {
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
-  
-  .Nav {
-    text-align: center;
-  }
-  
-  .AuthorNav {
-    grid-column-start: 9;
-    grid-column-end: 10;
-    cursor: pointer;
-  }
-  
   .Author {
     margin: auto;
     width: 400px;
     text-align: center;
     padding-top: 40px;
-  }
-  
-  .PurchaseNav {
-    grid-column-start: 10;
-    grid-column-end: 11;
-    cursor: pointer;
-  }
-  
-  .App-body {
-    font-size: large;
-    grid-row-start: 2;
-    grid-row-end: 2;
   }
   
   .BookCover {
@@ -82,11 +106,6 @@
     display: inline-flex;
   }
   
-  .BookCoverImage {
-    width: 100%;
-    height: 100%;
-  }
-  
   .BookSummaryText {
     margin: 10px;
     padding-top: 130px;
@@ -107,9 +126,5 @@
     left: 100px;
     width: 200px;
     height: 200px;
-  }
-  
-  .PurchaseLinks {
-    margin: auto;
   }
 }
