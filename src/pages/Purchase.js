@@ -8,9 +8,9 @@ class Purchase extends Component {
     return (
       <div className="App">
         <div className="App-body">
-          <h3>Pig-a-boo!</h3>
+          <h3>Purchase Pig-a-boo!</h3>
           <div className="BookSummary">
-            <div className="BookCoverPurchase">
+            <div className="BookCover">
               <img className="BookCoverImage" alt="Book Cover" src={pigaboo_cover}/>
             </div>
           </div>
