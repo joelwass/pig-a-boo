@@ -179,6 +179,7 @@ a {
   }
   
   .PeekingPigBottom {
+    display: block;
     position: absolute;
     top: 59px;
     left: 100px;
