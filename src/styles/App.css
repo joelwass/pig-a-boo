@@ -2,10 +2,15 @@
 .App {
   text-align: center;
   display: grid;  
+  font-family: 'Doctor Soos';
   grid-template-columns: auto;
   grid-template-rows: auto auto;
-  font-family: 'Doctor Soos';
   font-size: 36px;
+}
+
+@font-face {
+  font-family: 'Doctor Soos';
+  src: url('./Doctor_Soos_Light_1.1.ttf');
 }
 
 .KierraNav {
@@ -15,6 +20,7 @@
 
 .Nav {
   text-align: center;
+  font-family: 'Doctor Soos';
 }
 
 a {
