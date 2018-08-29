@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './pages/Home.js'
 import Author from './pages/Author.js'
 import Purchase from './pages/Purchase.js'
+import Contact from './pages/Contact.js'
 import './styles/App.css'
 
 const App = () => (
@@ -11,12 +12,12 @@ const App = () => (
       <header className="App-header">
         <div className="KierraNav Nav">
           <Link to="/">
-            <h3>Kierra Falbo</h3>
+            <h3>Home</h3>
           </Link>
         </div>
         <div className="AuthorNav Nav">
           <Link to="/author">
-            <h3>Author</h3>
+            <h3>About the Author</h3>
           </Link>
         </div>
         <div className="PurchaseNav Nav">
@@ -24,10 +25,16 @@ const App = () => (
             <h3>Purchase</h3>
           </Link>
         </div>
+        <div className="ContactNav Nav">
+          <Link to="/contact">
+            <h3>Contact Me</h3>
+          </Link>
+        </div>
       </header>
       <Route exact path="/" component={Home} />
       <Route path="/author" component={Author} />
       <Route path="/purchase" component={Purchase} />
+      <Route path="/contact" component={Contact} />
     </div>
   </Router>
 );

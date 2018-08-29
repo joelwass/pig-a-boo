@@ -8,7 +8,7 @@ class Purchase extends Component {
     return (
       <div className="App">
         <div className="App-body">
-          <h3>Purchase Pig-a-boo!</h3>
+          <h3>Purchase Pig-A-Boo!</h3>
           <div className="BookSummary">
             <div className="BookCoverPurchase">
               <img className="BookCoverImage" alt="Book Cover" src={pigaboo_cover}/>

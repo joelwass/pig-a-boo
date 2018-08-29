@@ -8,13 +8,12 @@ class Home extends Component {
     return (
       <div className="App">
         <div className="App-body">
-          <h3>Pig-a-boo!</h3>
           <div className="BookSummary">
             <div className="BookCover">
               <img className="BookCoverImage" alt="Book Cover" src={pigaboo_cover}/>
             </div>
             <div className="BookSummaryText">
-              Embark on the adventures of Piper and Pig-A-Boo as they save halloween from disaster, and find a 
+              Embark on the adventures of Piper and Pig-A-Boo as they save Halloween from disaster and find a 
               lasting friendship along the way!<br /><br />
               Written and Illustrated by <b>Kierra Falbo</b>
             </div>

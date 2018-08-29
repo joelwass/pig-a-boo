@@ -13,11 +13,18 @@ class Author extends Component {
             <div className="AuthorImageContainer">
               <img className="BookCoverImage" alt="Book Cover" src={kierra_image}/>
             </div>
-            <div className="BookSummaryText">
-              Kierra Falbo is an artist, sculpture, mathematician, biomedical engineer, and author.
-              She has no shortage of talents, and has recently embarked on writing children's 
-              short stories. She enjoys traveling, painting, and helping save kids from fires. 
-              She does it all. She's a legend.
+            <div className="AuthorText">
+              <p>Kierra Falbo is originally from Pittsburgh, Pennsylvania. She obtained
+              her Bachelor’s degree in Biomedical Engineering from the University of
+              North Carolina at Chapel Hill and her Master’s degree in Prosthetics and
+              Orthotics from Northwestern University. She currently works at the
+              University of Michigan.</p>
+              <p>In her free time, Kierra is an artist. She learned to oil paint in Florence,
+              Italy and hasn’t stopped painting since. Living in Italy for a period of
+              time and exploring Europe also enhanced her love of travel, and she
+              always enjoys exploring new places.</p>
+              <p>Kierra has two pets, a dog and a cat, but no pig (as of now).
+              This is Kierra’s first children’s book.</p>
             </div>
           </div>
         </div>

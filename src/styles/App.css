@@ -5,6 +5,7 @@
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   font-family: 'Doctor Soos';
+  font-size: 36px;
 }
 
 .KierraNav {
@@ -31,13 +32,19 @@ a {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   border-bottom: 1px solid black;
 }
 
 .PurchaseNav {
   grid-column-start: 2;
   grid-column-end: 3;
+  cursor: pointer;
+}
+
+.ContactNav {
+  grid-column-start: 3;
+  grid-column-end: 4;
   cursor: pointer;
 }
 
@@ -116,14 +123,20 @@ a {
   }
 
   .PurchaseNav {
+    grid-column-start: 9;
+    grid-column-end: 10;
+    cursor: pointer;
+  }
+
+  .ContactNav {
     grid-column-start: 10;
     grid-column-end: 11;
     cursor: pointer;
   }
 
   .AuthorNav {
-    grid-column-start: 9;
-    grid-column-end: 10;
+    grid-column-start: 8;
+    grid-column-end: 9;
     cursor: pointer;
   }
 
@@ -135,7 +148,7 @@ a {
   }
   
   .BookCover {
-    width: 300px;
+    width: 500px;
     height: auto;
     float: left;
     border: 1px solid black;
@@ -143,8 +156,9 @@ a {
   }
 
   .AuthorImageContainer {
-    width: 300px;
-    height: auto;
+    width: 500px;
+    height: 700px;
+    margin-top: 30px;
     float: left;
     border: 1px solid black;
   }
@@ -158,29 +172,38 @@ a {
   }
   
   .BookSummary {
+    margin: auto;
     margin-top: 50px;
-    width: 700px;
+    width: 80%;
     display: inline-flex;
     z-index: 1000;
   }
   
   .BookSummaryText {
-    margin: 10px;
-    padding-top: 130px;
+    margin: auto;
+    padding-top: 40px;
     width: 330px;
+  }
+
+  .AuthorText {
+    margin: auto;
+    width: 530px;
   }
   
   .PeekingPig {
     position: absolute;
+    top: 300px;
     right: 0;
     float: right;
-    width: 140px;
-    height: 200px;
+    width: 180px;
+    height: 240px;
+    z-index: -1;
   }
   
   .PeekingPigBottom {
     display: block;
     position: absolute;
+    z-index: -1;
     top: 59px;
     left: 100px;
     width: 240px;
