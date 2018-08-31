@@ -25,7 +25,7 @@
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .AuthorNav {
@@ -38,6 +38,7 @@ a {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   display: grid;
+  background-color: blue;
   grid-template-columns: auto auto auto;
   border-bottom: 1px solid black;
 }
@@ -135,6 +136,7 @@ a {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
     display: grid;
+    background-color: blue;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
     border-bottom: 1px solid black;
   }

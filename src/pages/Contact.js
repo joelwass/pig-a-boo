@@ -13,7 +13,7 @@ class Contact extends Component {
               <p>I hope you enjoyed the book!</p>
               <p>I welcome any comments, questions, or concerns that people
 have about this book, Halloween, or pigs in their lives.</p>
-              <p>Email me at: <a href="emailto:pigaboobooks@gmail.com">pigaboobooks@gmail.com</a></p>
+              <p>Email me at: <a href="emailto:pigaboobooks@gmail.com" style={{ color: 'black' }}>pigaboobooks@gmail.com</a></p>
             </div>
             <img className="PeekingPigContactLeft" alt="Peeking Pig" src={pig3}/>
           </div>
