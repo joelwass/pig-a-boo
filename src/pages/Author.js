@@ -19,7 +19,7 @@ class Author extends Component {
               North Carolina at Chapel Hill and her Master’s degree in Prosthetics and
               Orthotics from Northwestern University. She currently works at the
               University of Michigan.</p>
-              <p>In her free time, Kierra is an artist. She learned to oil paint in Florence,
+              <p>In her free time, Kierra is an artist. She learned oil painting in Florence,
               Italy and hasn’t stopped painting since. Living in Italy for a period of
               time and exploring Europe also enhanced her love of travel, and she
               always enjoys exploring new places.</p>

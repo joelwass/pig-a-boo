@@ -118,7 +118,7 @@ a {
   margin-bottom: 20px;
   margin-left: 200px;
   margin-right: 200px;
-  border: 1px solid green;
+  border: 3px solid #94CB71;
 }
 
 .BookSummaryText {
@@ -212,6 +212,7 @@ a {
   }
 
   .AuthorText {
+    font-size: 30px;
     margin: auto;
     width: 530px;
   }
