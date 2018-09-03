@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import pig3 from '../images/pig3.jpeg'
+import pig5 from '../images/pig5.jpeg'
 import '../styles/App.css'
 
 class Contact extends Component {
@@ -15,7 +15,7 @@ class Contact extends Component {
 have about this book, Halloween, or pigs in their lives.</p>
               <p>Email me at: <a href="emailto:pigaboobooks@gmail.com" style={{ color: 'black' }}>pigaboobooks@gmail.com</a></p>
             </div>
-            <img className="PeekingPigContactLeft" alt="Peeking Pig" src={pig3}/>
+            <img className="PeekingPigContactAbove" alt="Peeking Pig" src={pig5}/>
           </div>
         </div>
       </div>

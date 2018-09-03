@@ -127,7 +127,7 @@ a {
   margin-bottom: 20px;
 }
 
-.PeekingPigContactLeft {
+.PeekingPigContactAbove {
   display: none;
 }
 
@@ -247,13 +247,13 @@ a {
     z-index: -1;
   }
 
-  .PeekingPigContactLeft {
+  .PeekingPigContactAbove {
     display: block;
     position: absolute;
-    top: 240px;
-    right: 0px;
-    width: 200px;
-    height: 280px;
+    top: 92px;
+    right: 220px;
+    width: 260px;
+    height: 160px;
     z-index: -1;
   }
 }
