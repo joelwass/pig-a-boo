@@ -6,6 +6,21 @@ import {Elements, StripeProvider} from 'react-stripe-elements';
 import '../styles/App.css'
 
 class Purchase extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hardcover: true
+    };
+  }
+
+  setHardcover = () => {
+    this.setState({ hardcover: true })
+  }
+
+  setPaperback = () => {
+    this.setState({ hardcover: false })
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,10 +35,15 @@ class Purchase extends Component {
           <div className="PurchaseLinks">
             <p>Link to purchase on amazon</p>
             <p>Link to purchase on Barnes and Nobles</p>
+            <p>Or purchase here</p>
+            <input type="radio" id="hardcoverChoice" checked={this.state.hardcover} onChange={this.setHardcover}>
+            </input><label htmlFor="hardcoverChoice">Hardcover $18.99</label><br/>
+            <input type="radio" id="paperbackChoice" checked={!this.state.hardcover} onChange={this.setPaperback}>
+            </input><label htmlFor="paperbackChoice">Paperback $12.99</label>
             <StripeProvider apiKey="pk_test_FMKCmt1o6kV5KQbkAkeB1cPB">
               <div className="example">
                 <Elements>
-                  <CheckoutForm />
+                  <CheckoutForm hardcover={this.state.hardcover}/>
                 </Elements>
               </div>
             </StripeProvider>
