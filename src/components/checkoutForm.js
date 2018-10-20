@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {Redirect} from 'react-router-dom'
 import {CardElement, injectStripe} from 'react-stripe-elements'
-const ENDPOINT = process.env.NODE_ENV === 'production' ? 'https://pigaboo.herokuapp.com' : 'http://localhost:9000'
+const ENDPOINT = 'https://pigaboo.herokuapp.com'
+//'http://localhost:9000'
 
 class CheckoutForm extends Component {
   constructor(props) {
