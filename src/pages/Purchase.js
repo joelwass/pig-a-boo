@@ -33,9 +33,6 @@ class Purchase extends Component {
           </div>
           <img className="PeekingPigBottom" alt="Peeking Pig" src={pig2}/>
           <div className="PurchaseLinks">
-            <p>Link to purchase on amazon</p>
-            <p>Link to purchase on Barnes and Nobles</p>
-            <p>Or purchase here</p>
             <input type="radio" id="hardcoverChoice" checked={this.state.hardcover} onChange={this.setHardcover}>
             </input><label htmlFor="hardcoverChoice">Hardcover $18.99</label><br/>
             <input type="radio" id="paperbackChoice" checked={!this.state.hardcover} onChange={this.setPaperback}>

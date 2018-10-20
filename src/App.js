@@ -4,6 +4,8 @@ import Home from './pages/Home.js'
 import Author from './pages/Author.js'
 import Purchase from './pages/Purchase.js'
 import Contact from './pages/Contact.js'
+import ErrorPage from './pages/Error.js'
+import Success from './pages/Success.js'
 import './styles/App.css'
 
 const App = () => (
@@ -35,6 +37,8 @@ const App = () => (
       <Route path="/author" component={Author} />
       <Route path="/purchase" component={Purchase} />
       <Route path="/contact" component={Contact} />
+      <Route path="/error" component={ErrorPage} />
+      <Route path="/success" component={Success} />
     </div>
   </Router>
 );
