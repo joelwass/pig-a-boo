@@ -116,8 +116,6 @@ a {
 
 .ContactText {
   margin-bottom: 20px;
-  margin-left: 200px;
-  margin-right: 200px;
   border: 3px solid #94CB71;
 }
 
@@ -132,6 +130,13 @@ a {
 }
 
 @media all and (min-width: 850px) {
+  .ContactText {
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 3px solid #94CB71;
+  }
+
   .App-header {
     grid-column: 1 / 1;
     grid-row: 1 / 1;

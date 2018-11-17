@@ -36,8 +36,8 @@ class Purchase extends Component {
             <input type="radio" id="hardcoverChoice" checked={this.state.hardcover} onChange={this.setHardcover}>
             </input><label htmlFor="hardcoverChoice">Hardcover $18.99</label><br/>
             <input type="radio" id="paperbackChoice" checked={!this.state.hardcover} onChange={this.setPaperback}>
-            </input><label htmlFor="paperbackChoice">Paperback $12.99</label>
-            <StripeProvider apiKey="pk_test_FMKCmt1o6kV5KQbkAkeB1cPB">
+            </input><label htmlFor="paperbackChoice">Paperback $12.99</label><br/>
+            <StripeProvider apiKey="pk_live_XHj6P5or8P0dCAITIwMNtNYi">
               <div className="example">
                 <Elements>
                   <CheckoutForm hardcover={this.state.hardcover}/>

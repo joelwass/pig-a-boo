@@ -9,6 +9,7 @@ class CheckoutForm extends Component {
     super(props)
     this.submit = this.submit.bind(this)
     this.state = {
+      michiganAddress: false,
       loading: false,
       redirect: false,
       name: '',
@@ -47,17 +48,22 @@ class CheckoutForm extends Component {
     const bodyObject = {
       token, 
       hardcover: this.props.hardcover,
+      quantity: 1,
+      michiganAddress: this.state.michiganAddress
     }
-    let response = await fetch(`${ENDPOINT}/charge`, {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(bodyObject)
-    })
-
-    if (response.ok) {
-      console.log("Purchase Complete!")
-      this.setState({ redirectSuccess: true, loading: false })
-    } else {
+    try {
+      let response = await fetch(`${ENDPOINT}/charge`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(bodyObject)
+      })
+      if (response.ok) {
+        console.log("Purchase Complete!")
+        this.setState({ redirectSuccess: true, loading: false })
+      } else {
+        this.setState({ redirectError: true, loading: false })
+      }
+    } catch (e) {
       this.setState({ redirectError: true, loading: false })
     }
   }
@@ -79,7 +85,12 @@ class CheckoutForm extends Component {
   }
 
   updateState = (e) => {
-    this.setState({ addressState: e.target.value })
+    const state = e.target.value
+    if (state.toLowerCase().includes('michigan') || state.includes('MI')) {
+      this.setState({ addressState: state, michiganAddress: true })
+    } else {
+      this.setState({ addressState: state, michiganAddress: false })
+    }
   }
 
   updateZip = (e) => {
@@ -87,7 +98,7 @@ class CheckoutForm extends Component {
   }
 
   render() {
-    const {redirectError, redirectSuccess, loading} = this.state
+    const {redirectError, redirectSuccess, loading, michiganAddress} = this.state
 
     if (redirectError) {
       return <Redirect to='/error'/>
@@ -97,6 +108,8 @@ class CheckoutForm extends Component {
     return (
       <div className="checkout">
         <h3>Shipping info</h3>
+        <p style={{fontSize: 14}}>Shipping is $4 (+$1 per additional book)</p>
+        { michiganAddress && <p style={{fontSize: 14}}>A 6% Sales tax will be imposed on Michigan recipients</p>}
         <div><input type="text" className="largeCheckout" id="nameInput" placeholder="Full name" onChange={this.updateName}></input></div>
         <div><input type="text" className="largeCheckout" id="emailInput" placeholder="Email" onChange={this.updateEmail}></input></div>
         <div><input type="text" className="largeCheckout" id="streetAddressInput" placeholder="Street address" onChange={this.updateStreet}></input></div>
@@ -105,8 +118,8 @@ class CheckoutForm extends Component {
         <input type="text" className="smallCheckout" id="stateInput" placeholder="State (WA)" onChange={this.updateState}></input>
         <input type="text" className="smallCheckout" id="zipInput" placeholder="Zip" onChange={this.updateZip}></input>
         </div>
-        { loading && <h2>Loading...</h2>}
         <CardElement />
+        { loading && <h2>Loading...</h2>}
         <button className="checkoutButton" onClick={this.submit}>Buy</button>
       </div>
     )
