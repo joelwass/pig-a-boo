@@ -48,7 +48,7 @@ class CheckoutForm extends Component {
     const bodyObject = {
       token, 
       hardcover: this.props.hardcover,
-      quantity: 1,
+      quantity: this.props.quantity,
       michiganAddress: this.state.michiganAddress
     }
     try {

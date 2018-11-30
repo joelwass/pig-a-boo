@@ -9,7 +9,8 @@ class Purchase extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hardcover: true
+      hardcover: true,
+      quantity: 1
     };
   }
 
@@ -19,6 +20,16 @@ class Purchase extends Component {
 
   setPaperback = () => {
     this.setState({ hardcover: false })
+  }
+
+  add = () => {
+    this.setState({ quantity: this.state.quantity + 1 })
+  }
+
+  subtract = () => {
+    if (this.state.quantity !== 1) {
+      this.setState({ quantity: this.state.quantity - 1 })
+    }
   }
 
   render() {
@@ -37,10 +48,14 @@ class Purchase extends Component {
             </input><label htmlFor="hardcoverChoice">Hardcover $18.99</label><br/>
             <input type="radio" id="paperbackChoice" checked={!this.state.hardcover} onChange={this.setPaperback}>
             </input><label htmlFor="paperbackChoice">Paperback $12.99</label><br/>
+            <div class="quantity-row">QUANTITY:
+              <button class="minus" onClick={this.subtract}> - </button><p class="quantity"> { this.state.quantity } </p>
+              <button class="plus" onClick={this.add}> + </button>
+            </div>
             <StripeProvider apiKey="pk_live_XHj6P5or8P0dCAITIwMNtNYi">
               <div className="example">
                 <Elements>
-                  <CheckoutForm hardcover={this.state.hardcover}/>
+                  <CheckoutForm hardcover={this.state.hardcover} quantity={this.state.quantity}/>
                 </Elements>
               </div>
             </StripeProvider>

@@ -28,6 +28,21 @@ a {
   color: white;
 }
 
+.quantity-row, .minus, .plus, .quantity{
+  display: inline-block;
+}
+
+.plus, .minus {
+  width: 50px;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 .AuthorNav {
   grid-column-start: 1;
   grid-column-end: 2;
