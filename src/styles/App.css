@@ -143,8 +143,74 @@ a {
 .PeekingPigContactAbove {
   display: none;
 }
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+ .StripeElement {
+  background-color: white;
+  height: auto;
+  font-size: 14px;
+  width: 400px;
+  margin: auto;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #8d9197;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
 
-@media all and (min-width: 850px) {
+.checkout input {
+  background-color: white;
+  height: auto;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #8d9197;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.smallCheckout {
+  width: 25%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.largeCheckout {
+  width: 400px;
+  margin: auto;
+}
+
+.largeCheckout--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.checkoutButton {
+  border-radius: 4px;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  font-family: 'Doctor Soos';
+  font-size: 28px;
+}
+
+@media all and (min-width: 600px) {
   .ContactText {
     margin-bottom: 20px;
     margin-left: 200px;
@@ -257,6 +323,12 @@ a {
     height: 200px;
   }
 
+  .smallCheckout {
+    width: 111px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
   .PeekingPigLeft {
     display: block;
     position: absolute;
@@ -276,70 +348,4 @@ a {
     height: 160px;
     z-index: -1;
   }
-}
-/**
- * The CSS shown here will not be introduced in the Quickstart guide, but shows
- * how you can use CSS to style your Element's container.
- */
- .StripeElement {
-  background-color: white;
-  height: auto;
-  font-size: 14px;
-  width: 400px;
-  margin: auto;
-  padding: 10px 12px;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  box-shadow: 0 1px 3px 0 #8d9197;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
-}
-
-.checkout input {
-  background-color: white;
-  height: auto;
-  font-size: 14px;
-  padding: 10px 12px;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  box-shadow: 0 1px 3px 0 #8d9197;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
-}
-
-.smallCheckout {
-  width: 112px;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
-.largeCheckout {
-  width: 400px;
-  margin: auto;
-}
-
-.largeCheckout--focus {
-  box-shadow: 0 1px 3px 0 #cfd7df;
-}
-
-.StripeElement--focus {
-  box-shadow: 0 1px 3px 0 #cfd7df;
-}
-
-.StripeElement--invalid {
-  border-color: #fa755a;
-}
-
-.StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
-}
-
-.checkoutButton {
-  border-radius: 4px;
-  border: 2px solid black;
-  margin-top: 20px;
-  width: 100px;
-  height: 40px;
-  font-family: 'Doctor Soos';
-  font-size: 28px;
 }

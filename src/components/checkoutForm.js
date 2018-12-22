@@ -114,9 +114,9 @@ class CheckoutForm extends Component {
         <div><input type="text" className="largeCheckout" id="emailInput" placeholder="Email" onChange={this.updateEmail}></input></div>
         <div><input type="text" className="largeCheckout" id="streetAddressInput" placeholder="Street address" onChange={this.updateStreet}></input></div>
         <div>
-        <input type="text" className="smallCheckout" id="cityInput" placeholder="City" onChange={this.updateCity}></input>
-        <input type="text" className="smallCheckout" id="stateInput" placeholder="State (WA)" onChange={this.updateState}></input>
-        <input type="text" className="smallCheckout" id="zipInput" placeholder="Zip" onChange={this.updateZip}></input>
+          <input type="text" className="smallCheckout" id="cityInput" placeholder="City" onChange={this.updateCity}></input>
+          <input type="text" className="smallCheckout" id="stateInput" placeholder="State (WA)" onChange={this.updateState}></input>
+          <input type="text" className="smallCheckout" id="zipInput" placeholder="Zip" onChange={this.updateZip}></input>
         </div>
         <CardElement />
         { loading && <h2>Loading...</h2>}

@@ -10,8 +10,8 @@ import './styles/App.css'
 
 class App extends React.Component {
   componentDidMount() {
-    if (window.location && window.location.protocol === 'http:') {
-      window.location = `https://www.pigaboobook.com${window.location.pathname}`
+    if (window.location && window.location.protocol === 'http:' && !window.location.host.includes('localhost')) {
+      window.location = `https://pigaboobook.com${window.location.pathname}`
     }
   }
 
