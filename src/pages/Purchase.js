@@ -48,9 +48,9 @@ class Purchase extends Component {
             </input><label htmlFor="hardcoverChoice">Hardcover $18.99</label><br/>
             <input type="radio" id="paperbackChoice" checked={!this.state.hardcover} onChange={this.setPaperback}>
             </input><label htmlFor="paperbackChoice">Paperback $12.99</label><br/>
-            <div class="quantity-row">QUANTITY:
-              <button class="minus" onClick={this.subtract}> - </button><p class="quantity"> { this.state.quantity } </p>
-              <button class="plus" onClick={this.add}> + </button>
+            <div className="quantity-row">QUANTITY:
+              <button className="minus" onClick={this.subtract}> - </button><p className="quantity"> { this.state.quantity } </p>
+              <button className="plus" onClick={this.add}> + </button>
             </div>
             <StripeProvider apiKey="pk_live_XHj6P5or8P0dCAITIwMNtNYi">
               <div className="example">

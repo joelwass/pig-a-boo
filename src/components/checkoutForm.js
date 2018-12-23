@@ -120,7 +120,7 @@ class CheckoutForm extends Component {
         </div>
         <CardElement />
         { loading && <h2>Loading...</h2>}
-        <button className="checkoutButton" onClick={this.submit}>Buy</button>
+        { !loading && <button className="checkoutButton" onClick={this.submit}>Buy</button>}
       </div>
     )
   }
