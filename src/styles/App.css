@@ -192,6 +192,11 @@ a {
   box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
+.validationError {
+  color: red;
+  font-size: 15px;
+}
+
 .StripeElement--invalid {
   border-color: #fa755a;
 }

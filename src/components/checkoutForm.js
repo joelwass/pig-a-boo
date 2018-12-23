@@ -17,14 +17,26 @@ class CheckoutForm extends Component {
       email: '',
       city: '',
       addressState: '',
-      zip: ''
+      zip: '',
+      fieldValidation: false
     }
   }
 
   async submit(ev) {
+    this.setState({ fieldValidation: false })
+    if (!this.state.streetAddress || 
+      !this.state.city || 
+      !this.state.addressState || 
+      !this.state.zip ||
+      !this.state.name ||
+      !this.state.email) {
+        this.setState({ fieldValidation: true })
+        return
+    }
     this.setState({ loading: true })
     const options = {
       name: this.state.name,
+      email: this.state.email,
       address_country: 'United States',
       address_zip: this.state.zip,
       address_state: this.state.addressState,
@@ -69,36 +81,42 @@ class CheckoutForm extends Component {
   }
 
   updateName = (e) => {
-    this.setState({ name: e.target.value })
+    this.setState({ fieldValidation: false, name: e.target.value })
   }
 
   updateEmail = (e) => {
-    this.setState({ email: e.target.value })
+    this.setState({ fieldValidation: false, email: e.target.value })
   }
 
   updateStreet = (e) => {
-    this.setState({ streetAddress: e.target.value })
+    this.setState({ fieldValidation: false, streetAddress: e.target.value })
   }
 
   updateCity = (e) => {
-    this.setState({ city: e.target.value })
+    this.setState({ fieldValidation: false, city: e.target.value })
   }
 
   updateState = (e) => {
     const state = e.target.value
     if (state.toLowerCase().includes('michigan') || state.includes('MI')) {
-      this.setState({ addressState: state, michiganAddress: true })
+      this.setState({ fieldValidation: false, addressState: state, michiganAddress: true })
     } else {
-      this.setState({ addressState: state, michiganAddress: false })
+      this.setState({ fieldValidation: false, addressState: state, michiganAddress: false })
     }
   }
 
   updateZip = (e) => {
-    this.setState({ zip: e.target.value })
+    this.setState({ fieldValidation: false, zip: e.target.value })
   }
 
   render() {
-    const {redirectError, redirectSuccess, loading, michiganAddress} = this.state
+    const {
+      redirectError, 
+      redirectSuccess, 
+      loading, 
+      michiganAddress,
+      fieldValidation
+    } = this.state
 
     if (redirectError) {
       return <Redirect to='/error'/>
@@ -110,6 +128,9 @@ class CheckoutForm extends Component {
         <h3>Shipping info</h3>
         <p style={{fontSize: 14}}>Shipping is $4 (+$1 per additional book)</p>
         { michiganAddress && <p style={{fontSize: 14}}>A 6% Sales tax will be imposed on Michigan recipients</p>}
+        { fieldValidation && <div class="validationError">
+          <p>All fields are required</p>
+        </div>}
         <div><input type="text" className="largeCheckout" id="nameInput" placeholder="Full name" onChange={this.updateName}></input></div>
         <div><input type="text" className="largeCheckout" id="emailInput" placeholder="Email" onChange={this.updateEmail}></input></div>
         <div><input type="text" className="largeCheckout" id="streetAddressInput" placeholder="Street address" onChange={this.updateStreet}></input></div>
