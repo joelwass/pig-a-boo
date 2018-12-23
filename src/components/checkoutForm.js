@@ -118,7 +118,7 @@ class CheckoutForm extends Component {
           <input type="text" className="smallCheckout" id="stateInput" placeholder="State (WA)" onChange={this.updateState}></input>
           <input type="text" className="smallCheckout" id="zipInput" placeholder="Zip" onChange={this.updateZip}></input>
         </div>
-        <CardElement />
+        <CardElement hidePostalCode={true}/>
         { loading && <h2>Loading...</h2>}
         { !loading && <button className="checkoutButton" onClick={this.submit}>Buy</button>}
       </div>
