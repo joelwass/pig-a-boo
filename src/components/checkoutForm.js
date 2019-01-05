@@ -61,6 +61,7 @@ class CheckoutForm extends Component {
       token, 
       hardcover: this.props.hardcover,
       quantity: this.props.quantity,
+      email: this.state.email,
       michiganAddress: this.state.michiganAddress
     }
     try {
